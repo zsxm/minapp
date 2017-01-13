@@ -1,4 +1,7 @@
+$(function(){
+	$("#sGenreEQ").combo({url:apis+"/sys/dict/genres"});
+});
 
-function ePostLoadForm() {
+var ePostLoadForm=function(){
 	$("#eForm").validate();
 }
