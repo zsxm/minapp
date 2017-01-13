@@ -5,17 +5,19 @@
 		<environment id="development">
 			<session name="minapp">
 				<addr>10.10.144.104:6379</addr>
+				<password>foobared</password>
 			</session>
 		</environment>
 		<environment id="test">
 			<session name="minapp">
 				<addr>10.10.144.104:6379</addr>
+				<password>foobared</password>
 			</session>
 		</environment>
 		<environment id="production">
 			<session name="minapp">
 				<addr>10.10.144.104:6379</addr>
-				<password>VOmblte2RWTPL6491</password>
+				<password>foobared</password>
 			</session>
 		</environment>
 	</environments>
