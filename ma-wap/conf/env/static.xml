@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE env PUBLIC "-//GOYY//DTD ENV 1.0//EN" "http://goyy.org/dtd/env-1.0.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<asset name="minapp">
+				<enable>true</enable>
+				<dir>/assets</dir>
+				<url>/assets</url>
+			</asset>
+			<static name="minapp">
+				<enable>true</enable>
+				<dir>static</dir>
+				<url>/statics</url>
+			</static>
+			<developer name="minapp">
+				<enable>true</enable>
+				<dir>/assets/hndev</dir>
+				<url>/hndev</url>
+			</developer>
+			<operation name="minapp">
+				<enable>true</enable>
+				<dir>/assets/hnopr</dir>
+				<url>/hnopr</url>
+			</operation>
+		</environment>
+		<environment id="test">
+			<asset name="minapp">
+				<enable>false</enable>
+				<dir>/app/assets</dir>
+				<url>http://bl.hn.yixin.com</url>
+			</asset>
+			<static name="minapp">
+				<enable>false</enable>
+				<dir>/app/assets/hnwap</dir>
+				<url>http://bl.hn.yixin.com/hnwap</url>
+			</static>
+			<developer name="minapp">
+				<enable>false</enable>
+				<dir>/app/assets/hndev</dir>
+				<url>http://bl.hn.yixin.com/hndev</url>
+			</developer>
+			<operation name="minapp">
+				<enable>false</enable>
+				<dir>/app/assets/hnopr</dir>
+				<url>http://bl.hn.yixin.com/hnopr</url>
+			</operation>
+		</environment>
+		<environment id="production">
+			<asset name="minapp">
+				<enable>false</enable>
+				<dir>/assets</dir>
+				<url>http://assets.yixinhuinong.com</url>
+			</asset>
+			<static name="minapp">
+				<enable>false</enable>
+				<dir>/assets/hnwap</dir>
+				<url>http://assets.yixinhuinong.com/hnwap</url>
+			</static>
+			<developer name="minapp">
+				<enable>false</enable>
+				<dir>/assets/hndev</dir>
+				<url>http://assets.yixinhuinong.com/hndev</url>
+			</developer>
+			<operation name="minapp">
+				<enable>false</enable>
+				<dir>/assets/hnopr</dir>
+				<url>http://assets.yixinhuinong.com/hnopr</url>
+			</operation>
+		</environment>
+	</environments>
+</configuration>

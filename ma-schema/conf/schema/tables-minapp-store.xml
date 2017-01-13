@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xtab PUBLIC "-//GOYY//DTD XTAB 1.0//EN" "http://goyy.org/dtd/xtab-1.0.dtd">
+<configuration>
+	<tables>
+		<table id="issue" name="小程序发布" extends="sys" generate="true" comment="小程序发布表">
+		</table>		
+	</tables>
+</configuration>

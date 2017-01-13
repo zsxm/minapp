@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xtab PUBLIC "-//GOYY//DTD XTAB 1.0//EN" "http://goyy.org/dtd/xtab-1.0.dtd">
+<configuration>
+	<columns>
+		<column id="id"           name="主键"         domain="id"     comment="主键"/>
+		<column id="code"         name="编号"         domain="code"   comment="编号"/>
+		<column id="name"         name="名称"         domain="name"   comment="名称"/>
+		<column id="nickname"     name="简称"         domain="code"   comment="简称"/>
+		<column id="fullname"     name="全称"         domain="memo"   comment="全称"/>
+		<column id="genre"        name="类型"         domain="code"   comment="类型"/>
+		<column id="classify"     name="分类"         domain="code"   comment="分类"/>
+		<column id="content"      name="内容"         domain="descr"  comment="内容"/>
+		<column id="memo"         name="备注"         domain="memo"   comment="备注"/>
+		<column id="descr"        name="描述"         domain="descr"  comment="描述"/>
+		<column id="remark"       name="描述"         domain="remark" comment="描述"/>
+		<column id="timed"        name="时间"         domain="time"   comment="时间"/>
+		<column id="passwd"       name="密码"         domain="name"   comment="密码"/>
+		<column id="email"        name="邮件"         domain="name"   comment="邮件"/>
+		<column id="mobile"       name="手机"         domain="code"   comment="手机"/>
+		<column id="tel"          name="电话"         domain="code"   comment="电话"/>
+		<column id="contact"      name="联系方式"     domain="name"   comment="联系方式"/>
+		<column id="sex"          name="性别"         domain="flag"   comment="性别 0:男 1:女"/>
+		<column id="receiver"     name="收件人"       domain="code"   comment="收件人"/>
+		<column id="address"      name="地址"         domain="memo"   comment="地址"/>
+		<column id="zipcode"      name="邮编"         domain="code"   comment="邮编"/>
+		<column id="intro"        name="简介"         domain="remark" comment="简介"/>
+		<column id="weight"       name="权重"         domain="int"    comment="权重"/>
+		<column id="city"         name="所在城市"     domain="id"     comment="所在城市"/>
+		<column id="ordinal"      name="排序"         domain="code"   comment="排序"/>
+		<column id="img"          name="图片"         domain="name"   comment="图片"/>
+		<column id="usable"       name="是否可用"     domain="flag"   comment="是否可用"/>
+		<column id="status"       name="状态"         domain="flag"   comment="状态"/>
+		<column id="mark"         name="标记"         domain="flag"   comment="标记"/>
+		<column id="source"       name="来源"         domain="flag"   comment="来源"/>
+		<column id="mkey"         name="键"           domain="flag"   comment="键"/>
+		<column id="mval"         name="值"           domain="name"   comment="值"/>
+		<column id="params"       name="参数"         domain="name"   comment="参数"/>
+		<column id="filters"      name="过滤"         domain="name"   comment="过滤"/>
+		<column id="begin_time"   name="开始时间"     domain="long"   comment="开始时间"/>
+		<column id="end_time"     name="截止时间"     domain="long"   comment="截止时间"/>
+		<column id="area_id"      name="所属区域"     domain="id"     comment="所属区域"/>
+		<column id="org_id"       name="所属机构"     domain="id"     comment="所属机构"/>
+		<column id="user_id"      name="用户ID"       domain="id"     comment="用户ID"/>
+		<column id="role_id"      name="角色ID"       domain="id"     comment="角色ID"/>
+		<column id="post_id"      name="岗位ID"       domain="id"     comment="岗位ID"/>
+		<column id="menu_id"      name="菜单ID"       domain="id"     comment="菜单ID"/>
+		<column id="parent_id"    name="父表主键"     domain="id"     comment="父表主键"/>
+		<column id="parent_ids"   name="父ID集"       domain="memo"   comment="父ID集"/>
+		<column id="parent_codes" name="父编号集"     domain="memo"   comment="父编号集"/>
+		<column id="parent_names" name="父名称集"     domain="memo"   comment="父名称集"/>
+		<column id="leaf"         name="是否叶子"     domain="int"    comment="是否叶子"/>
+		<column id="grade"        name="节点等级"     domain="int"    comment="节点等级"/>
+		<column id="creates"      name="创建机构"     domain="id"     comment="创建机构"/>
+		<column id="creater"      name="创建人员"     domain="id"     comment="创建人员"/>
+		<column id="created"      name="创建时间"     domain="long"   comment="创建时间"/>
+		<column id="modifier"     name="更新人员"     domain="id"     comment="更新人员"/>
+		<column id="modified"     name="更新时间"     domain="long"   comment="更新时间"/>
+		<column id="version"      name="乐观锁"       domain="int"    comment="乐观锁"         default="0"/>
+		<column id="deletion"     name="删除标志"     domain="bool"   comment="逻辑删除标志"   default="0"/>
+		<column id="artifical"    name="人造数据"     domain="bool"   comment="是否是人造数据" default="0"/>
+		<column id="history"      name="历史数据"     domain="bool"   comment="历史数据"       default="0"/>
+		
+		<!--自定义父列-->
+	</columns>
+</configuration>
