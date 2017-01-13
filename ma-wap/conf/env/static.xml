@@ -15,13 +15,13 @@
 			</static>
 			<developer name="minapp">
 				<enable>true</enable>
-				<dir>/assets/hndev</dir>
-				<url>/hndev</url>
+				<dir>/assets/madev</dir>
+				<url>/madev</url>
 			</developer>
 			<operation name="minapp">
 				<enable>true</enable>
-				<dir>/assets/hnopr</dir>
-				<url>/hnopr</url>
+				<dir>/assets/maopr</dir>
+				<url>/maopr</url>
 			</operation>
 		</environment>
 		<environment id="test">
@@ -37,13 +37,13 @@
 			</static>
 			<developer name="minapp">
 				<enable>false</enable>
-				<dir>/app/assets/hndev</dir>
-				<url>http://bl.hn.yixin.com/hndev</url>
+				<dir>/app/assets/madev</dir>
+				<url>http://bl.hn.yixin.com/madev</url>
 			</developer>
 			<operation name="minapp">
 				<enable>false</enable>
-				<dir>/app/assets/hnopr</dir>
-				<url>http://bl.hn.yixin.com/hnopr</url>
+				<dir>/app/assets/maopr</dir>
+				<url>http://bl.hn.yixin.com/maopr</url>
 			</operation>
 		</environment>
 		<environment id="production">
@@ -59,13 +59,13 @@
 			</static>
 			<developer name="minapp">
 				<enable>false</enable>
-				<dir>/assets/hndev</dir>
-				<url>http://assets.yixinhuinong.com/hndev</url>
+				<dir>/assets/madev</dir>
+				<url>http://assets.yixinhuinong.com/madev</url>
 			</developer>
 			<operation name="minapp">
 				<enable>false</enable>
-				<dir>/assets/hnopr</dir>
-				<url>http://assets.yixinhuinong.com/hnopr</url>
+				<dir>/assets/maopr</dir>
+				<url>http://assets.yixinhuinong.com/maopr</url>
 			</operation>
 		</environment>
 	</environments>
