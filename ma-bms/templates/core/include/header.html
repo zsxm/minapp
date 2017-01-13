@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	$(function(){
+		$("#header").permission();
+		var winUrl = $.url();
+		var project=winUrl.param("project");
+		if($.isNotBlank(project)){
+			var headerMenu="#header_"+project;
+			$(headerMenu).addClass("active");
+		}
+		$("#loginName").html($.getLoginName());
+	});
+</script>
+<div id="header" class="navbar navbar-default navbar-fixed-top" role="navigation" style="display:none;">
+	<div class="container-fluid">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" go:href="/home.html?{%ver%}">摩登界</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li id="header_home" data-permissions="home:bannerpc:view,home:bannerwap:view" class="{%if eq .param 'home'%}active {%end%}dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">首页管理<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li data-permission="home:bannerpc:view"><a go:href="/comm/banner/banner.html?{%ver%}&project=home&banner=pc&m={%md5 'project=home&banner=pc'%}">电脑版焦点图管理</a></li>
+							<li data-permission="home:bannerwap:view"><a go:href="/comm/banner/banner.html?{%ver%}&project=home&banner=wap&m={%md5 'project=home&banner=wap'%}">触屏版焦点图管理</a></li>
+						</ul>
+					</li>
+					<li id="header_sys" data-permissions="sys:area:view,sys:org:view,sys:user:view,sys:menu:view,sys:post:view,sys:role:view,sys:dict:view,sys:log:view,sys:cache:view" class="{%if eq .param 'sys'%}active {%end%}dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li data-permissions="sys:area:view"><a go:href="/sys/area/area.html?{%ver%}">区域管理</a></li>
+							<li data-permissions="sys:org:view"><a go:href="/sys/org/org.html?{%ver%}">机构管理</a></li>
+							<li data-permissions="sys:user:view"><a go:href="/sys/user/user.html?{%ver%}">用户管理</a></li>
+							<li data-permissions="sys:menu:view,sys:post:view,sys:role:view" class="divider"></li>
+							<li data-permissions="sys:menu:view"><a go:href="/sys/menu/menu.html?{%ver%}">菜单管理</a></li>
+							<li data-permissions="sys:post:view"><a go:href="/sys/post/post.html?{%ver%}">岗位管理</a></li>
+							<li data-permissions="sys:role:view"><a go:href="/sys/role/role.html?{%ver%}">角色管理</a></li>
+							<li data-permissions="sys:dict:view" class="divider"></li>
+							<li data-permissions="sys:dict:view"><a go:href="/sys/dict/dict.html?{%ver%}">字典管理</a></li>
+							<li data-permissions="sys:log:view,sys:cache:view" class="divider"></li>
+							<li data-permissions="sys:cache:view"><a go:href="/sys/cache/cache.html?{%ver%}">缓存查询</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="loginName" go:href="/home.html?{%ver%}">&nbsp;</a></li>
+					<li><a href="/logout">退出</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

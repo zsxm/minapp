@@ -3,5 +3,6 @@
 <configuration>
 	<modules>
 		<module id="store" name="商店" prefix="xcx" project="minapp" generate="true" comment="小程序商店" apipath="minapp/ma-store"/>
+		<module id="sys" name="系统" prefix="sys" project="minapp" generate="true" comment="系统" apipath="minapp/ma-sys"/>
 	</modules>
 </configuration>

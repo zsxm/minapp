@@ -32,8 +32,8 @@
 			</asset>
 			<static name="minapp">
 				<enable>false</enable>
-				<dir>/app/assets/hnwap</dir>
-				<url>http://bl.hn.yixin.com/hnwap</url>
+				<dir>/app/assets/mawap</dir>
+				<url>http://bl.hn.yixin.com/mawap</url>
 			</static>
 			<developer name="minapp">
 				<enable>false</enable>
@@ -54,8 +54,8 @@
 			</asset>
 			<static name="minapp">
 				<enable>false</enable>
-				<dir>/assets/hnwap</dir>
-				<url>http://assets.yixinhuinong.com/hnwap</url>
+				<dir>/assets/mawap</dir>
+				<url>http://assets.yixinhuinong.com/mawap</url>
 			</static>
 			<developer name="minapp">
 				<enable>false</enable>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xtab PUBLIC "-//GOYY//DTD XTAB 1.0//EN" "http://goyy.org/dtd/xtab-1.0.dtd">
+<configuration>
+	<tables>		
+		<table id="menu" name="菜单" extends="tree" generate="true" comment="菜单信息表">
+			<column id="href" name="链接" domain="memo" comment="链接"/>
+			<column id="target" name="目标" domain="code" comment="目标"/>
+			<column id="icon" name="图标" domain="code" comment="图标"/>
+			<column id="hidden" name="隐藏" domain="bool" comment="隐藏"/>
+			<column id="permission" name="权限" domain="memo" comment="权限"/>
+		</table>
+		<table id="post" name="岗位" extends="tree" generate="true" comment="岗位信息表">
+		</table>
+		<table id="post_menu" name="岗位菜单" extends="sys" generate="true" menu="false" comment="岗位菜单信息表" master="post" slave="menu">
+			<column extends="post_id"/>
+			<column extends="menu_id"/>
+		</table>
+		<table id="role" name="角色" extends="sys" generate="true" comment="角色信息表">
+			<column extends="name"/>
+			<column extends="code"/>
+			<column extends="genre" name="系统类型" comment="系统类型：10.功能权限，20.数据权限"/>
+			<column extends="classify" name="业务分类" comment="业务分类"/>
+			<column extends="ordinal"/>
+		</table>
+		<table id="role_post" name="角色岗位" extends="sys" generate="true" menu="false" comment="角色岗位信息表" master="role" slave="post">
+			<column extends="role_id"/>
+			<column extends="post_id"/>
+		</table>
+		<table id="-" name="-" generate="false" menu="true" permissions="sys:area:view,sys:org:view,sys:user:view"/>
+		<table id="area" name="区域" extends="tree" generate="true" comment="区域信息表">
+		</table>
+		<table id="org" name="机构" extends="tree" generate="true" comment="机构信息表">
+			<column extends="area_id"/>
+		</table>
+		<table id="user" name="用户" extends="sys" generate="true" comment="用户信息表">
+			<column extends="name"/>
+			<column extends="code"/>
+			<column extends="passwd"/>
+			<column extends="genre"/>
+			<column extends="email"/>
+			<column extends="tel"/>
+			<column extends="mobile"/>
+			<column extends="area_id"/>
+			<column extends="org_id"/>
+			<column id="login_name" name="登录名" domain="code" comment="登录名"/>
+			<column id="login_ip" name="登录IP" domain="code" comment="登录IP"/>
+			<column id="login_time" name="登录时间" domain="long" comment="登录时间"/>
+		</table>
+		<table id="user_role" name="用户角色" extends="sys" generate="true" menu="false" comment="用户角色信息表" master="user" slave="role">
+			<column extends="user_id"/>
+			<column extends="role_id"/>
+		</table>
+		<table id="-" name="-" generate="false" menu="true" permissions="sys:dict:view"/>
+		<table id="dict" name="字典" extends="sys" generate="true" comment="字典信息表">
+			<column extends="genre"/>
+			<column extends="descr"/>
+			<column extends="mkey"/>
+			<column extends="mval"/>
+			<column extends="filters"/>
+			<column extends="ordinal"/>
+		</table>
+		<table id="-" name="-" generate="false" menu="true" permissions="sys:cache:view"/>
+		<table id="cache" name="缓存" generate="false" menu="true"/>
+		<table id="blacklist" name="黑名单" extends="sys" generate="true" menu="false" comment="黑名单信息表">
+			<column extends="name"/>
+			<column extends="genre"/>
+			<column extends="usable"/>
+		</table>
+		<table id="conf" name="配置" extends="sys" generate="true" menu="false" comment="配置信息表">
+			<column extends="name"/>
+			<column extends="code"/>
+			<column extends="content"/>
+			<column extends="genre"/>
+			<column extends="usable"/>
+			<column extends="ordinal"/>
+		</table>
+	</tables>
+</configuration>
