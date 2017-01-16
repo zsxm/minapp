@@ -3,7 +3,7 @@
 <head>
 <meta name="description" content="">
 <meta name="author" content="">
-<!--#settings project="store" module="issue" title="小程序发布"--><!--#endsettings-->
+<!--#settings project="store" module="release" title="商店发布"--><!--#endsettings-->
 <!--#with prefix="e" --><!--#endwith-->
 <title go:title="/title.html">{%title%}</title>
 <!--#include file="/core/include/head.html"--><!--#endinclude-->
@@ -39,6 +39,15 @@
 					<thead>
 						<tr>
 							<th class="f-w50">序号</th>
+							<th>产品名称</th>
+							<th>产品版本</th>
+							<th>手机号码</th>
+							<th>H5网址</th>
+							<th>联系邮箱</th>
+							<th>奖励数量</th>
+							<th>任务金额</th>
+							<th>执行周期</th>
+							<th>任务说明</th>
 							<th class="f-w150">创建时间</th>
 							<th>操作</th>
 						</tr>
@@ -48,6 +57,15 @@
 					{{#each slice}}
 						<tr{{#if (divisible @index 2)}} class="active"{{/if}}>
 							<td title="{{id}}">{{abbr id 5}}</td>
+							<td>{{name}}</td>
+							<td>{{ver}}</td>
+							<td>{{mobile}}</td>
+							<td>{{url}}</td>
+							<td>{{email}}</td>
+							<td>{{rewardNum}}</td>
+							<td>{{taskMoney}}</td>
+							<td>{{execCycle}}</td>
+							<td>{{taskRemark}}</td>
 							<td>{{uyymdhms created}}</td>
 							<td>
 								<a href="#eFormContent" go:data-state="edit" go:data-template="{%.prefix%}FormTemplate" go:data-url="{%apis%}/{%project%}/{%module%}/edit" onclick="{%.prefix%}Action(this,'{{id}}',{%.prefix%}PostLoadForm)" go:data-permissions="{%project%}:{%module%}:edit">修改</a>
@@ -65,6 +83,60 @@
 					<br/>
 					<!--#include file="/core/comm/alert.html" param="{%.prefix%}Form"--><!--#endinclude-->
 					<input type="hidden" id="id" name="id" value="{{id}}" />
+					<div class="form-group">
+						<label class="control-label">产品名称</label>
+						<div>
+							<input class="form-control required" id="name" name="name" value="{{name}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">产品版本</label>
+						<div>
+							<input class="form-control required" id="ver" name="ver" value="{{ver}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">手机号码</label>
+						<div>
+							<input class="form-control required" id="mobile" name="mobile" value="{{mobile}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">H5网址</label>
+						<div>
+							<input class="form-control required" id="url" name="url" value="{{url}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">联系邮箱</label>
+						<div>
+							<input class="form-control required" id="email" name="email" value="{{email}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">奖励数量</label>
+						<div>
+							<input class="form-control required" id="rewardNum" name="rewardNum" value="{{rewardNum}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">任务金额</label>
+						<div>
+							<input class="form-control required" id="taskMoney" name="taskMoney" value="{{taskMoney}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">执行周期</label>
+						<div>
+							<input class="form-control required" id="execCycle" name="execCycle" value="{{execCycle}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">任务说明</label>
+						<div>
+							<input class="form-control required" id="taskRemark" name="taskRemark" value="{{taskRemark}}"/>
+						</div>
+					</div>
 					{{#if (ne state 'show')}}
 					<button type="submit" class="btn btn-primary" go:data-permissions="{%project%}:{%module%}:edit,{%project%}:{%module%}:add">保存</button>
 					{{/if}}

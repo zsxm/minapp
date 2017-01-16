@@ -1,4 +1,4 @@
-package issue
+package release
 
 import (
 	"gopkg.in/goyy/goyy.v0/web/xhttp"

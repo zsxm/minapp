@@ -2,7 +2,18 @@
 <!DOCTYPE xtab PUBLIC "-//GOYY//DTD XTAB 1.0//EN" "http://goyy.org/dtd/xtab-1.0.dtd">
 <configuration>
 	<tables>
-		<table id="issue" name="小程序发布" extends="sys" generate="true" comment="小程序发布表">
+		<table id="release" name="商店发布" extends="sys" generate="true" comment="商店发布表">
+			<column id="name" name="产品名称" domain="name" comment="产品名称"/>
+			<column id="ver" name="产品版本" domain="flag" comment="产品版本"/>
+			<column extends="memo" name="产品描述" comment="产品描述"/>
+			<column extends="mobile" name="手机号码" comment="手机号码"/>
+			<column id="url" name="H5网址" domain="name" comment="H5网址"/>
+			<column extends="email" name="联系邮箱" comment="联系邮箱"/>
+			<column id="reward_num" name="奖励数量" domain="int" comment="奖励数量"/>
+			<column id="task_money" name="任务金额" domain="float" comment="任务金额"/>
+			<column id="exec_cycle" name="执行周期" domain="name" comment="执行周期"/>
+			<column id="task_remark" name="任务说明" domain="memo" comment="任务说明"/>
 		</table>		
+		
 	</tables>
 </configuration>

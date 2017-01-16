@@ -2,5 +2,5 @@
 package store
 
 import (
-	_ "minapp/ma-store/internal/issue"
+	_ "minapp/ma-store/internal/release"
 )

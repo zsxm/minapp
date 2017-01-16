@@ -2,7 +2,6 @@
 <!DOCTYPE xtab PUBLIC "-//GOYY//DTD XTAB 1.0//EN" "http://goyy.org/dtd/xtab-1.0.dtd">
 <configuration>
 	<modules>
-		<module id="store" name="商店" prefix="xcx" project="minapp" generate="true" comment="小程序商店" apipath="minapp/ma-store"/>
-		<module id="sys" name="系统" prefix="sys" project="minapp" generate="true" comment="系统" apipath="minapp/ma-sys"/>
+		<module id="store" name="商店" prefix="se" project="minapp" generate="true" comment="小程序商店" apipath="minapp/ma-store"/>
 	</modules>
 </configuration>
