@@ -6,7 +6,6 @@ import _ "gopkg.in/goyy/goyy.v0/app/sys/api/dict"
 
 import (
 	_ "minapp/ma-store"
-	_ "minapp/ma-sys"
 
 	_ "gopkg.in/goyy/goyy.v0/app/comm/controller/assets"
 	_ "gopkg.in/goyy/goyy.v0/app/comm/controller/captcha"

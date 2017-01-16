@@ -9,3 +9,5 @@ minapp
 
 >>运行
 >>>>	执行wap.go生成的可执行文件
+
+>>http://modengvip.com/guangchang/store/
